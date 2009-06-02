@@ -1,6 +1,6 @@
 spec = Gem::Specification.new do |s|
   s.name = "svn_ignore_rails"
-  s.version = "1.0.0"
+  s.version = "1.0.1"
   s.author = "Pol Llovet"
   s.email = "pol.llovet+code@gmail.com"
   s.homepage = "http://github.com/pol/svn_ignore_rails"
@@ -25,17 +25,4 @@ spec = Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.has_rdoc = true
   s.rdoc_options = %w'--inline-source --line-numbers README generators'
-  
-  if s.respond_to? :specification_version then
-     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
-     s.specification_version = 2
-
-     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
-       s.add_runtime_dependency(%q<rails>, ["~> 2.1.0"])
-     else
-       s.add_dependency(%q<rails>, ["~> 2.1.0"])
-     end
-   else
-     s.add_dependency(%q<rails>, ["~> 2.1.0"])
-   end
 end

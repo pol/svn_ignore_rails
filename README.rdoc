@@ -1,0 +1,42 @@
+= SVN_Ignore_Rails Rake Task
+
+== DESCRIPTION:
+
+Sensible SVN file removal/ignore from a Rails app
+
+svn_ignore_rails is a simple rails generator that puts a rake task in your app
+that allows you to remove and ignore files from your rails app that shouldn't
+be in your repository.
+
+== FEATURES:
+
+* Doesn't delete any files, just removes them from the repository (uses the --keep-local option)
+* Doesn't delete any directories, but recurses into them, ignoring files if appropriate
+* Commits along the way so you can revert back to a particular step if necessary
+* Has command-line options for verbose and simulation
+* Do a 'rake -T svn' to see what all it does
+
+== INSTALL:
+
+* Run (sudo if necessary): gem install git://github.com/pol-svn_ignore_rails.git
+* Run (in your rails app): script/generate svn_ignore_rails
+
+== USAGE:
+
+All operations should be performed within the the root of the rails app.
+It is expected that the app is entirely checked into SVN, at the very least, the
+repository is set.  Running 'svn update' from the root of the app should work.
+
+Run a simulation:
+$ rake svn:setup OPTIONS='simulation'
+
+Run a verbose simulation:
+$ rake svn:setup OPTIONS='simulation,verbose'
+
+Run just the config/ removals
+$ rake svn:remove_config
+
+Run the whole set of tasks
+$ rake svn:setup
+
+See the rake file for more information.

@@ -1,0 +1,3 @@
+* Make the default behavior sensible when the app has not yet been committed to svn
+* Tests
+* Ask for svn repo credentials initially so the tasks don't spam for them

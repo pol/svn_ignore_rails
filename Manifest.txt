@@ -1,0 +1,13 @@
+.document
+generators/svn_ignore
+generators/svn_ignore/CHANGES
+generators/svn_ignore/svn_ignore_generator.rb
+generators/svn_ignore/templates/svn_ignore.rake
+History.rdoc
+init.rb
+License.txt
+Manifest.txt
+Rakefile
+README.rdoc
+TODO.txt
+Upgrade.rdoc

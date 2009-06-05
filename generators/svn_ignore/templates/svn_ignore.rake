@@ -21,7 +21,7 @@ namespace :svn do
     tasks = TaskQueue.new
     tasks.concat remove_file_with_example('config','database.yml')
     tasks.add_msg "Committing..."
-    tasks.add_cmd "svn commit #{RAILS_ROOT}"
+    tasks.add_cmd "svn commit #{RAILS_ROOT} -m 'Remove and ignore config/database.yml'"
     tasks.run(options)
   end
 
@@ -30,7 +30,7 @@ namespace :svn do
     tasks = TaskQueue.new
     tasks.concat remove_file_with_example('config','deploy.rb')
     tasks.add_msg "Committing..."
-    tasks.add_cmd "svn commit #{RAILS_ROOT} -m 'Remove and ignore config/database.yml'"
+    tasks.add_cmd "svn commit #{RAILS_ROOT} -m 'Remove and ignore config/deploy.rb'"
     tasks.run(options)
   end
   
